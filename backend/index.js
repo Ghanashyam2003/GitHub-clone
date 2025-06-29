@@ -20,7 +20,9 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    (argv) => addRepo(argv.file ) // Pass the file argument to addRepo 
+    (argv) => {
+        addRepo(argv.file ) // Pass the file argument to addRepo 
+    }
   )
   .command(
     "commit <message>",
@@ -31,7 +33,9 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    commitRepo 
+    (argv) => {
+        commitRepo(argv.message )
+    }
   )
   .command("push", "Push changes to the s3", {}, pushRepo)
   .command("pull", "Pull changes to the s3", {}, pullRepo)
