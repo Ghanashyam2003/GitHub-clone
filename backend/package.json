@@ -8,8 +8,11 @@
   "keywords": [],
   "author": "Ghanashyam badgujar",
   "license": "ISC",
-  "description": "Git Clone",
+  "description": "Github Clone",
   "dependencies": {
     "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.33"
   }
 }
