@@ -20,7 +20,7 @@ yargs(hideBin(process.argv))
         type: "string",
       });
     },
-    addRepo 
+    (argv) => addRepo(argv.file ) // Pass the file argument to addRepo 
   )
   .command(
     "commit <message>",
